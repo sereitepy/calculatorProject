@@ -12,30 +12,31 @@ body {
   border-radius: 15px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  max-width: 500px;
+  max-width: 90%;
+  width: 100%;
   overflow: hidden;
 }
 
 #display {
   width: 100%;
-  height: 150px;
+  height: 20vh;
   padding: 10px;
   background-color: rgba(78, 78, 78, 0.597);
   text-align: left;
   color: white;
-  font-size: 5rem;
+  font-size: 5vw; /* Use vw for responsive font size */
 }
 
 #keys {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  padding: 30px;
+  padding: 5vw; /* Use vw for responsive padding */
 }
 
 button {
-  width: 85px;
-  height: 85px;
+  width: 20vw; /* Use vw for responsive width */
+  height: 20vw; /* Use vw for responsive height */
   color: white;
   font-size: 2rem;
   border-radius: 50%;
@@ -62,4 +63,23 @@ button:active {
 
 .orange:active {
   background-color: rgb(247, 218, 163);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  #display {
+    font-size: 8vw; /* Increase font size for smaller screens */
+    height: 15vh;
+  }
+
+  button {
+    width: 18vw; /* Smaller button size for smaller screens */
+    height: 18vw;
+    font-size: 4vw; /* Adjust font size for buttons */
+  }
+
+  #keys {
+    gap: 0.5rem; /* Reduce gap between buttons */
+    padding: 2vw; /* Reduce padding for smaller screens */
+  }
 }
